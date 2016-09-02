@@ -7,6 +7,9 @@ TableView和控制器瘦身利器，一句话搞定TableView代理方法 didSele
 
 
 
+
+
+
 ##业务场景：
 TableView有几个项目item cell，并且有点击item跳转控制器或者执行一些其他代码的操作，通常的代码是：
 ```objc
@@ -34,6 +37,10 @@ TableView有几个项目item cell，并且有点击item跳转控制器或者执�
 
 
 
+
+
+
+
 ## 设计思路
 为控制器UIViewController增加一个分类（UIViewController+ActionItem.h）
 
@@ -42,6 +49,10 @@ TableView有几个项目item cell，并且有点击item跳转控制器或者执�
 还有一个字典key是cell item对应的数据，value对应控制器类或者想要执行的代码块（block）
 
 当点击某个cell didSelectRowAtIndexPath方法被调用的时候取出cell对应的item控制器进行push或者modal,或者执行保存的代码块block
+
+
+
+
 
 
 
@@ -113,3 +124,11 @@ self.actionItemCount方法
 }
 
 ```
+## 附加说明
+作为tabview 瘦身的初步目的，初步想到这个方案，故简单实现此框架，
+肯定会有考虑不周，在某些业务场景下使用出现坑或者不灵活的地方，希望大家多多提意见，
+引导此框架健壮发展！thank you！
+
+
+
+
