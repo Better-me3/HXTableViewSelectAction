@@ -93,8 +93,9 @@ viewDidLoad 里面直接调用控制器分类方法addItemMaterial 确定好每�
 
 ```objc
 **注意**：
-addItemMaterial调用几次就会有几个cell 以及对应的item数据，因此numberOfRowsInSection直接返回UIViewController+ActionItem分类提供的
-self.actionItemCount方法
+addItemMaterial调用几次就会有几个cell 以及对应的item数据。
+因此numberOfRowsInSection直接返回UIViewController+ActionItem分类提供的
+self.actionItemCount方法即可！
 
  - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.actionItemCount;
