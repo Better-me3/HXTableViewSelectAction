@@ -4,7 +4,6 @@
 
 TableView和控制器瘦身利器，一句话搞定TableView代理方法 didSelectRowAtIndexPath 拒绝一坨坨恶心的 if else
 
-**注意**：<!---->
 
 业务场景：TableView有几个项目item cell，并且有点击item跳转控制器或者执行一些其他代码的操作，通常的代码是：
 ```objc
