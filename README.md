@@ -1,11 +1,14 @@
 # HXTableViewSelectAction
 
-===
+
 
 TableView和控制器瘦身利器，一句话搞定TableView代理方法 didSelectRowAtIndexPath 拒绝一坨坨恶心的 if else
 
 
-业务场景：TableView有几个项目item cell，并且有点击item跳转控制器或者执行一些其他代码的操作，通常的代码是：
+
+
+##业务场景：
+TableView有几个项目item cell，并且有点击item跳转控制器或者执行一些其他代码的操作，通常的代码是：
 ```objc
  if (indexPath.row == 0) {
     // action.....
@@ -29,6 +32,8 @@ TableView和控制器瘦身利器，一句话搞定TableView代理方法 didSele
  }
 ``` 
 
+
+
 ## 设计思路
 为控制器UIViewController增加一个分类（UIViewController+ActionItem.h）
 
@@ -37,6 +42,8 @@ TableView和控制器瘦身利器，一句话搞定TableView代理方法 didSele
 还有一个字典key是cell item对应的数据，value对应控制器类或者想要执行的代码块（block）
 
 当点击某个cell didSelectRowAtIndexPath方法被调用的时候取出cell对应的item控制器进行push或者modal,或者执行保存的代码块block
+
+
 
 
 
